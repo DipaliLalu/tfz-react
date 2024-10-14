@@ -5,15 +5,21 @@ import App from './App';
 import Header from './components/Header';
 import Card from './components/Card';
 import reportWebVitals from './reportWebVitals';
-
+import MovingDot from './components/MovingDot';
+import Objectdemo from './components/Objectdemo';
+import Todo from './components/Todo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
    <>
    <Header/>
-    <App />
-    {/* <Card person={{name:'xyz',btnText:'Submit'}}/> */}
+   <Objectdemo/>
+   <Todo/>
+    {/* <App />
+    <Card person={{name:'xyz',btnText:'Submit'}}/>
+   <MovingDot>
+    </MovingDot> */}
   </>
   </React.StrictMode>
 );

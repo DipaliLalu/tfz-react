@@ -48,6 +48,7 @@ class Child extends React.Component {
         <h1>Hello World!</h1>
       );
     }
-  }
+}
+
   
 export default Classdemo
