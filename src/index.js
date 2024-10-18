@@ -1,26 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import Header from './components/Header';
-import Card from './components/Card';
 import reportWebVitals from './reportWebVitals';
-import MovingDot from './components/MovingDot';
-import Objectdemo from './components/Objectdemo';
-import Todo from './components/Todo';
+import Todo from './components/todo-app/Todo';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   <>
-   <Header/>
-   <Objectdemo/>
-   <Todo/>
-    {/* <App />
+    <>
+      <Header />
+      {/* <Objectdemo /> */}
+      <Todo/>
+      {/* <App />
     <Card person={{name:'xyz',btnText:'Submit'}}/>
    <MovingDot>
     </MovingDot> */}
-  </>
+    </>
   </React.StrictMode>
 );
 

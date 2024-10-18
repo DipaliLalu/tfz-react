@@ -1,8 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-import Lists from './components/lists-rendering/Lists';
-import Classdemo from './components/Classdemo';
-import MovingDot from './components/MovingDot';
 
 function App() {
   console.log("hello world");
