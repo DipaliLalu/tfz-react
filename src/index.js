@@ -1,23 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Header from './components/Header';
 import reportWebVitals from './reportWebVitals';
-import Todo from './components/todo-app/Todo';
-
+import PasswordGeneretor from './components/Password-Generetor/PasswordGeneretor';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <>
-      <Header />
-      {/* <Objectdemo /> */}
-      <Todo/>
-      {/* <App />
-    <Card person={{name:'xyz',btnText:'Submit'}}/>
-   <MovingDot>
-    </MovingDot> */}
+      {/* <Scrollbar/>
+      <Todo/> */}
+      <PasswordGeneretor/>
     </>
   </React.StrictMode>
 );

@@ -1,10 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Tasklist from './TaskList';
 
 function Todo() {
   const [message, setMessage] = useState('');
+  const [loader, setLoader] = useState(true);
   const [lists, setList] = useState(JSON.parse(localStorage.getItem('lists')) || []);
-  let nextId = lists.length || 0;
+  const nextIdByList = lists.map((currentEl) => currentEl.id);
+  
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false); 
+    }, 1800);
+  }, []);
+
+  if (loader) {
+    return (
+      <div className='d-flex justify-content-center align-items-center mt-5'>
+      <div className="spinner-border text-primary mt-5" role="status">
+        <span className="visually-hidden mt-5">Loading...</span>
+      </div>
+      </div>
+    );
+  }
+
+  let index = nextIdByList.length - 1;
+  let nextId = nextIdByList[index] || 0;
   localStorage.setItem('lists', JSON.stringify(lists));
 
   return (
@@ -22,13 +42,17 @@ function Todo() {
         />
         <button
           onClick={() => {
-            if (message.trim()) {
-              setList([...lists, { id: nextId++, name: message }]);
+            const uniqueTask=lists.map((task)=>task.name)
+            if (message.trim()=='' || uniqueTask.includes(message.trim())) {
+              alert('enter new task')
+              setMessage('');
+            }
+            else {
+              setList([...lists, { id: ++nextId, name: message }]);
               setMessage('');
             }
           }}
-          className='btn btn-primary p-2 px-3'
-        >
+          className='btn btn-primary p-2 px-3'>
           Add
         </button>
       </div>
