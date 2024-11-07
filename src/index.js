@@ -2,22 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import PasswordGeneretor from './components/Password-Generetor/PasswordGeneretor';
-
+// import FetchAPI from './components/features/FetchAPI/FetchAPI';
+import RegistrationForm from './components/features/Registration/RegistrationForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
     <>
-      {/* <Scrollbar/>
-      <Todo/> */}
-      <PasswordGeneretor/>
+      <RegistrationForm/>
+      {/* <FetchAPI/> */}
     </>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
