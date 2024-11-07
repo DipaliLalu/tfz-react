@@ -1,0 +1,36 @@
+.form-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#7B45B7,#4A95CF);
+}
+header{
+    font-size: 25px;
+}
+form{
+    background-color: #2A2A68;
+    color:white;
+    width: max-content !important;
+    padding:2rem 2.4rem !important;
+    border-radius: 20px;
+}
+a{
+    color:white;
+    font-weight: 600;
+}
+.btn{
+    background-color: transparent;
+    color:white;
+}
+input{
+    border:none !important;
+}
+input:focus{
+    outline: none;
+}
+.error{
+    font-size: 13px;
+}
+
